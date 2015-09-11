@@ -1,6 +1,12 @@
 class ChallengesController < ApplicationController
   before_action :set_challenge, only: [:show, :edit, :update, :destroy]
 
+
+
+
+  def myprofile
+    @user = User.find(params[:id])
+  end
   # GET /challenges
   # GET /challenges.json
   def index

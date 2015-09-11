@@ -5,10 +5,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 	# mount_uploader :image, ImageUploader
 
-	has_and_belongs_to_many :challenges
+	has_many :challenges
 
-	validates :name, presence: true, length: { minimum: 2}
+	
 	validates :username, presence: true, uniqueness: true
 	validates :email, presence: true, uniqueness: true
-	validates :password, presence: true, length: { minimum: 6 }
+	
 end

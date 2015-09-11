@@ -3,11 +3,6 @@ class UsersController < ApplicationController
 
   before_filter :authenticate_user!
 
-  def myprofile
-    @user = User.find(params[:id])
-  end
-
-
   # GET /users
   # GET /users.json
   def index

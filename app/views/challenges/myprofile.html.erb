@@ -1,8 +1,8 @@
-<h1><%= @user.username %>'s Profile</h1>
+<h1><%= current_user.username %>'s Profile</h1>
 
 <div class="row">
 	<div class="col-md-6">
-		<% @user.challenges.each do |challenge| %>
+		<% current_user.challenges.each do |challenge| %>
 		<div class="panel panel-success">
 			<div class="panel-heading">
 				<%= link_to challenge.title, challenge %>

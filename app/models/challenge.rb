@@ -4,6 +4,6 @@ class Challenge < ActiveRecord::Base
   		self[:list] = list_to_input
 	end
 
-	has_and_belongs_to_many :users
+	belongs_to :user
 	# mount_uploader :image, ImageUploader
 end
